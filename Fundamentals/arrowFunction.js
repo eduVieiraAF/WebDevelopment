@@ -1,7 +1,7 @@
 {
     var sum = (a,b) => console.log(a + b) ;
     var sub = (a, b) => {
-        if (a < b) console.log(`1st number is smaller → ${ a-b }`);
+        if (a < b) console.log(`1st number is smaller → ${ a - b }`);
         else console.log(a-b);
     };
     var div = (a, b) => {
