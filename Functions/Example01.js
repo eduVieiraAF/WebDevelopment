@@ -37,3 +37,6 @@ function add(a, b) {
 }
 
 add(1, 2)(3)
+
+const plus = add(1, 2)
+plus(3)
