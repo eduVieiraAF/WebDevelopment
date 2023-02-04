@@ -1,5 +1,5 @@
 const result = mark => mark >= 7 ? "Aproved" : "Failed"
-// *                            (if)        true      else
+// *                      (if)        true      else
 
 console.log(result(6.8))
 console.log(result(7.1))
