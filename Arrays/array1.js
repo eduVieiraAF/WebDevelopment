@@ -27,3 +27,12 @@ delete approved[1]
 console.log(approved[1]) // undefined
 console.log("••••••••••••••")
 approved.forEach(it => console.log(it))
+
+approved[1] = "Juan"
+console.log(approved)
+
+console.log("••••••••••••••")
+
+approved.splice(1, 1) //will delete index 1 and only 1 elemente (second argument)
+// it's possible to add elements with splice(index, elements to delete, "add element 1", "add element 2")
+console.log(approved)
