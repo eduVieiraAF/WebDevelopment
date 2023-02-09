@@ -1,4 +1,5 @@
 // * Changes an array
+// array.reduce(function(accumulator, currentValue, currentIndex, arr), initialValue)
 
 const students =[
     {name: "Kevin", grade: 8.4, scholarship: false},
