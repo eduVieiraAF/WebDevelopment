@@ -11,7 +11,7 @@ const smallestSalary = (members, curMember) => {
 axios.get(url).then(response => {
     const staff = response.data
 
-    console.log(staff)
+    // console.log(staff)
 
     // Chinese woman with the smallest salary
     const funStaff = staff

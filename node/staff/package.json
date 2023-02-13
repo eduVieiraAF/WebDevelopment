@@ -2,8 +2,10 @@
   "name": "staff",
   "version": "1.0.0",
   "description": "Learning how to build a small project",
-  "main": "index.js",
+  "main": "staff.js",
   "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
