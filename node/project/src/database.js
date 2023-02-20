@@ -3,19 +3,24 @@ const sequence = {
     get id() { return this._id++ }
 }
 
-const products = {
-
-}
+const products = {}
 
 function saveProduct(item) {
-    if (!item.if) item.id = sequence.id
+    if (!item.id) item.id = sequence.id
     products[item.id] = item
 
     return item
 }
 
-function getProduct() { return products[id] || {} }
+function getProduct(id) { return products[id] || {} }
 
 function getProducts() { return Object.values(products) }
 
-module.exports = { saveProduct, getProduct, getProducts }
+function deleteProduct(id) {
+    const item = products[id]
+    delete products[id]
+
+    return item
+}
+
+module.exports = { saveProduct, getProduct, getProducts, deleteProduct }
