@@ -3,6 +3,11 @@ const express = require('express')
 const app = express()
 const db = require('./database')
 
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}))
+
 app.get('/products', (req, res, next) => {
     console.log("Middlware1...")
     next()
