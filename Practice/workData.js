@@ -1,4 +1,4 @@
-const products = require('../SRAgricula.json')
+const products = require('./SRAgricula.json')
 
 console.log(products['2166-2366'][8].CORREIAS.concat(" - ", products['2166-2366'][8].__EMPTY_2))
 
