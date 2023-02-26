@@ -1,4 +1,3 @@
-const { words, reject } = require("lodash")
 
 function speakAfterwards(time, words) {
     return new Promise(resolve => {
