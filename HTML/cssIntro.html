@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A bit o' CSS</title>
+    <style>
+        h1 {
+            background-color: cornflowerblue;
+            color: brown;         
+        }
+
+        .c1 {
+            color: coral;
+            padding: 18px;
+        }
+
+        .c2 {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #main {
+            color: darkblue;
+            cursor: grab;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <span id="main">Text #1</span><br>
+    <span class="c1 c2">Text #2</span><br> <!--* 2 classes-->
+    <span class="c1" wb-attrib>Text #3</span>
+    <!-- on the browser's conosle → document.querySelector('[wb-attrib]')-->
+</body>
+</html>
