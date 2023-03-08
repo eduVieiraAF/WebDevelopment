@@ -1,6 +1,7 @@
 <h1>Forms</h1>
 
-<form action="http://localhost:3003/users" method="POST">
+<form method="POST">
+    <input type="hidden" name="_id" value="3">
     <label for="_name">Username</label><input type="text" name="username"><br>
     <label for="_pass">Password</label><input type="password" name="pass"><br>
     <label for="_bio">Your Bio</label><textarea name="bio" cols="24" rows="10"></textarea><br>
@@ -11,7 +12,7 @@
     <div>
         <input type="checkbox" name="active">Active
     </div><br>
-    <select name="state" >
+    <select name="state">
         <option value="ac">Acre</option>
         <option value="sp">São Paulo</option>
         <option value="rj">Rio de Janeiro</option>
@@ -24,8 +25,10 @@
         <option value="ts">TypeScript</option>
         <option value="c">C</option>
     </select>
+    <input type="hidden" name="dev" value="eduVieiraAF">
     <br>
-    <button type="submit">ADD</button>
+    <button formaction="http://localhost:3003/users">ADD</button>
+    <button formaction="http://localhost:3003/users/3">EDIT</button>
 
 </form>
 
