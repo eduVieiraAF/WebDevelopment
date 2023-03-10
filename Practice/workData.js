@@ -33,7 +33,7 @@ fs.writeFileSync("D:/WebDevelopment/Practice/SRAgricula.csv", csvForm)
 
 const workSheetFormat = prodObject.map(obj => [obj.ncm, obj.description, obj.un])
 const workSheetColumns = [
-    { header: '****Unidade de Medida', key: 'un', width: 5 },
+    { header: '**Unidade de Medida', key: 'un', width: 5 },
     { header: '**Descricao', key: 'description', width: 10 },
     { header: '**NCM', key: 'ncm', width: 10 },
 ]

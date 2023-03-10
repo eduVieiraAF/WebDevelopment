@@ -34,8 +34,7 @@
             const content = document.getElementById("cnt")
            
             link.onclick = function(e) {
-                e.preventDefault()
-                console.log('Clicked')                
+                e.preventDefault()                
 
                 fetch(link.href) // fetch is based on promise
                     .then(res => res.text())
