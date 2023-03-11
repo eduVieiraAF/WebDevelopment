@@ -1,0 +1,58 @@
+<h1>Videos</h1>
+
+<video id="myVideo" width="800" height="450" controls controlsList = "nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4"> 
+    video format not support
+</video>
+
+<div wm-progress="myVideo" class="progress">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="myVideo">PLAY</button>
+    <button wm-pause="myVideo">PAUSE</button>
+</div>
+
+<style>
+    .progress {
+        height: 20px;
+        width: 500px;
+        border: solid 2px cadetblue;
+        border-radius: 15px;
+        margin: 12px;
+        box-shadow: 0px 0px 2px darkslategray, 2px 2px 3px darkslategray;
+    }
+
+    .progress > div {
+        background-color: aquamarine;
+        color: black;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        border-radius: 15px;
+        padding-top: 1px;
+    }
+
+</style>
+
+<script>
+    function handleVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()
+        document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause()
+
+        setInterval(() => {
+            const percent = (video.currentTime / video.duration) * 100
+            const divValue = document.querySelector(`[wm-progress=${id}] > div`)
+
+            divValue.style.width = `${percent}%`
+            divValue.innerHTML = `${percent.toFixed(1)}%`
+        }, 500)
+    }
+
+
+    handleVideo('myVideo') 
+</script>
