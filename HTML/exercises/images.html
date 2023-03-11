@@ -1,6 +1,6 @@
 <h1>Images</h1>
 
-<p>
+<p wm-slide>
     <img 
     src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
     alt="Sea wall"
@@ -9,7 +9,7 @@
     title="Sea wall"
     >
 </p>
-<p>
+<p wm-slide>
     <img 
     src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
     alt="Animated logo"
@@ -18,13 +18,13 @@
     title="Logo"
     >
 </p>
-<p class="circular">
+<p class="circular" wm-slide>
     <img  src="http://files.cod3r.com.br/curso-web/imagem3.png" 
     alt="Rio"
     title="Rio de Janeiro"
     >
 </p>
-<p class="text">
+<p class="text" wm-slide>
     <img  src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
     alt="Avatar"
     title="Avatar"
@@ -35,9 +35,9 @@
     This is a texty text which goes with the image. This does not describe much but it's a start
 </p>
 
-<p class="city"></p>
+<p class="city" wm-slide></p>
 
-<p>
+<p wm-slide>
     <picture>
         <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
         media="(min-width: 600px)">
@@ -73,3 +73,45 @@
 }
 
 </style>
+
+<script>
+    function move(elem, start, end, step, callback) {
+        const newStart = start - step
+
+        if (newStart >= end) {
+            elem.style.left = newStart + "px"
+            setTimeout(() => move(elem, newStart, end, step, callback), 7)
+        } else {
+            callback()
+        }
+    }
+
+    function slider() {
+        const elements = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from(elements)
+
+        showSlides(slides, slides[0])
+    }
+
+    function showSlides(slides, slide) {
+        slide.style.display = "block"
+
+        const start = innerWidth
+        const end = -slide.clientWidth
+
+        slide.style.left = `${start}px`
+
+        move(slide, start, end, 5, () => {
+            slide.style.display = 'none'
+            showSlides(slides, getNext(slides, slide))
+        })
+    }
+
+    function getNext(list, current) {
+        const i = list.indexOf(current) + 1
+
+        return i < list.length ? list[i] : list[0]
+    }
+
+    slider()
+</script>
