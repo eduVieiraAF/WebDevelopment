@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+      /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+      /* 
+        Rules of thumb
+
+        1. !important → not recommended
+        2. more specific selectors
+        3. last rule run
+
+
+         */
+
+      p {
+        background-color: #aaa;
+        box-shadow: 1px 1px 5px;
+        width: fit-content;
+      }
+
+      .observacao {
+        background-color: aquamarine;
+        border: dashed 2px;
+        padding: 15px;
+        font-size: 32px;
+      }
+
+      p.observacao {
+        padding: 5px 60px;
+        background: linear-gradient(to left, white, blueviolet);
+        border-radius: 40px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <p class='observacao'>Olha essa observação!!!!</p>
-</body>
-
+  <body>
+    <p class="observacao">Olha essa observação!</p>
+  </body>
 </html>
