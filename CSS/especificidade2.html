@@ -6,6 +6,29 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://specificity.keegan.st/ */
+
+        body { font-size: 34px; }
+
+        div {
+            background: linear-gradient(to left, white, aquamarine, white);
+        }
+
+        div[wm-cor] {
+            background: linear-gradient(to left, white, orange, white);
+        }
+
+        div.estilo {
+            background: linear-gradient(to left, white, rgb(0, 110, 255), white);
+        }
+
+        div:hover {
+            background: linear-gradient(to left, orange, white, orange);
+        }
+
+        #unico1, #unico2 {
+            background: linear-gradient(to left, white, rgb(244, 127, 255), white);
+        }
+
     </style>
 </head>
 
