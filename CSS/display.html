@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Display</title>
     <style>
-        /* ... */
-    </style>
-</head>
+      body {
+        font-size: 32px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        color: indigo;
+        background: linear-gradient(to right, violet, powderblue);
+      }
 
-<body>
+      ul {
+        padding: 0;
+        border-radius: 30px;
+        box-shadow: 2px 2px 6px;
+        margin: 10px 2px;
+        padding: 4px 8px;
+      }
+
+      li {
+        font-style: italic;
+      }
+
+      div {
+        background-color: bisque;
+        width: fit-content;
+        padding: 2px 15px;
+        border-radius: 30px;
+        box-shadow: 2px 2px 6px;
+        margin: 10px 2px;
+      }
+
+      span {
+        background-color: rgba(16, 231, 160, 0.836);
+        width: fit-content;
+        padding: 2px 15px;
+        border-radius: 30px;
+        box-shadow: 2px 2px 6px;
+        margin: 10px 2px;
+      }
+
+      div, span, ul {
+        width: 50%;
+        height: 150px;
+        text-align: center;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
     <div>Texto 1</div>
     <span>Texto 2</span>
     <span>Texto 3</span>
     <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
     </ul>
-</body>
-
+  </body>
 </html>
