@@ -6,7 +6,53 @@
     <title>Texto</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
-        /* ... */
+        p {
+            font-size: 12pt; /* 1em | 100% | 16px */
+            font-size: 72pt; /*1in*/
+            font-size: 2.2em;
+            font-size: 3.2rem; /* root*/
+            font-size: 50vh;
+            font-size: 10vh;
+
+            font-family: cursive, serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'indie flower';
+
+            font-weight: 900;
+            font-style: italic;
+            word-spacing: 20px;
+            letter-spacing: 0.2em;
+            line-height: 2.5em;
+            text-align: center;
+
+            text-transform: capitalize;
+            text-decoration: overline;
+
+            text-shadow: 2px 2px 6px;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            font-family: monospace;
+            color: aquamarine;
+            width: fit-content;
+            background: linear-gradient(to left, black, rgb(9, 114, 155));
+            padding: 2px 8px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 3px grey;
+        }
+
+        .botao:hover {
+            color: darkkhaki;
+        }
+
+        .botao:active {
+            background: linear-gradient(to left, white, goldenrod);
+            color: black;
+            box-shadow: none;
+        }
+
         * {
             margin: 0;
         }
@@ -22,11 +68,11 @@
 <body>
     <div>
         <p>
-            Que texto
-            <br>legal!!!
+            Some
+            <br>text!!!
         </p>
     </div>
-    <a href="http://google.com" class="botao destaque">Google</a>
+    <a href="http://google.com" class="botao">Google</a>
 </body>
 
 </html>
