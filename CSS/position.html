@@ -5,7 +5,68 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div {
+            font-size: 45px;
+            padding: 20px;
+            border: solid 1px dodgerblue;
+            border-radius: 15px;
+        }
+
+        .static {
+            top: 100px;
+            left: 100px;
+            background: linear-gradient(to right, white, powderblue);
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 2px;
+            background: linear-gradient(to right, white, seagreen);
+        }
+
+        .relative1 {
+            background: linear-gradient(to right, white, orange);
+            position: relative;
+            left: 35px;
+            top: 5px;
+        }
+
+        .absolute1 {
+            background: linear-gradient(to right, white, yellow);
+            position: absolute;
+            left: 350px;
+        }
+
+        .relative2 {
+            background: linear-gradient(to right, white, violet);
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .absolute2 {
+            background: linear-gradient(to right, white, slategray);
+            position: absolute;
+            left: 10px;
+            top:10px;
+            width: 20px;
+            height: 45px;
+        }
+
+        .sticky {
+            background: linear-gradient(to right, white, rgb(168, 228, 181));
+            position: -webkit-sticky; /*safari*/
+            position: sticky;
+            top: 0px;
+        }
+       
     </style>
 </head>
 
