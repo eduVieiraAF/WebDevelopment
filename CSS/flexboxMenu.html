@@ -6,10 +6,15 @@
     <title>Desafio Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: 'Oswald', sans-serif;
-            background-color: lightgray;
+            background-color: azure;
         }
         
         .cabecalho {
@@ -17,39 +22,91 @@
             color: #fff;
             border-bottom: solid 5px #4faddb;
             height: 80px;
+            box-sizing: content-box;
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
         }
         
         .logo img {
-            height: 50px;
+            display: inline-block;
+            padding: 15px;
+            height: 100%;
         }
-        
+
+        .menu-toggle {
+            float: right;
+            color: #eee;
+            background-color: #555 ;
+            border: solid 1px#777;
+            border-radius: 5pz;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 15px 20px;
+
+
+        }
+
+        .menu {
+            display: inline-block;
+            vertical-align: top;
+            height: 100px;
+            padding: 25px
+        }
+    
         .menu ul {
             list-style: none;
             margin: 0;
             padding: 0;
+        
+        }
+
+        .menu li {
+            display: inline-block;
         }
         
         .cabecalho a {
             text-decoration: none;
             color: #eee;
             font-size: 1.3em;
-            padding: 10px 15px;
+            padding: 0px 15px;
+            height: 80px;
         }
         
-        .menu a:hover {
+        .menu a:hover, .menu a.selected {
             background-color: #4faddb;
             color: #000;
+            border-radius: 5px;
         }
         
         .cabecalho .botao {
-            border-radius: 30px;
-            padding: 10px 25px;
+            border-radius: 30px;        
             margin-right: 10px;
+            padding: 10px;
         }
         
-        .destaque {
+        .destaque, .botao {
             background: #f50a31;
+            color: #fff !important;
+            padding: 10px;
+        }
+
+        menu a {
+            padding: 15px;
+        }
+
+        .autenticacao {
+            float: right;
+            padding: 25px;
+            height: 80px;
+        }
+
+        .login:hover {
+            background-color: #f50a31;
             color: #fff;
+            border-radius: 20px;
         }
         /* ==================== */
         /* Solução com Flex Box */
@@ -64,6 +121,9 @@
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
         <nav class="menu">
             <ul>
                 <li>
@@ -81,7 +141,7 @@
             </ul>
         </nav>
         <aside class="autenticacao">
-            <a href="#login">Login</a>
+            <a href="#login" class="login">Login</a>
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
