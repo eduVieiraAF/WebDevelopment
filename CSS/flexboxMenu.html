@@ -23,6 +23,9 @@
             border-bottom: solid 5px #4faddb;
             height: 80px;
             box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
@@ -53,19 +56,19 @@
             display: inline-block;
             vertical-align: top;
             height: 100px;
-            padding: 25px
+            padding: 25px;
+            flex-grow: 10;
         }
     
         .menu ul {
             list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            /*justify-content: space-around;*/
         
         }
 
-        .menu li {
-            display: inline-block;
-        }
         
         .cabecalho a {
             text-decoration: none;
