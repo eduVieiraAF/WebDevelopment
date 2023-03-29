@@ -6,7 +6,29 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+            align-items: center;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            flex-basis: 100px;
+            width: 200px; /*does not apply due to flex-basis*/
+        }
+
+        .flex-container {
+            display: flex;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(4) {
+            /* grow shrink basis */
+            flex: 3 6 100px;
+        }
+        
     </style>
 </head>
 
