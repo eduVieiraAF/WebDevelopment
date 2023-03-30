@@ -6,11 +6,17 @@
     border-bottom: solid 2px dodgerblue;
     border-radius: 20px;
     box-sizing: border-box;
-    box-shadow: 0px 4px 6px dodgerblue;
-    justify-content: space-evenly;
-    align-items: baseline;
+    box-shadow: 0px 4px 10px dodgerblue;
     margin-bottom: 8px;
-    height: 5vh;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
 }
 
 div {
@@ -23,14 +29,23 @@ a {
     background: linear-gradient(to right, dodgerblue, white);
     padding: 2px 18px;
     border-radius: 15px;
-    box-shadow: 1px 1px 3px powderblue;
+    box-shadow: 0px 1px 2px powderblue;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 a:hover {
-    color: dodgerblue;
+    color: mediumseagreen;
     background: none;
     background-color: black;
-    box-shadow: 1px 1px 3px slateblue;
+    box-shadow: 3px 3px 6px mediumseagreen, -3px -3px 6px mediumseagreen;
+}
+
+.selected {
+    color: mediumseagreen;
+    background: none;
+    background-color: black;
+    box-shadow: 3px 3px 6px mediumseagreen, -3px -3px 6px mediumseagreen;
 }
 
 
