@@ -29,7 +29,7 @@ a {
     background: linear-gradient(to right, dodgerblue, white);
     padding: 2px 18px;
     border-radius: 15px;
-    box-shadow: 0px 1px 2px powderblue;
+    box-shadow: 0px 2px 2px powderblue;
     font-size: 18px;
     font-weight: bold;
 }
@@ -38,7 +38,7 @@ a:hover {
     color: mediumseagreen;
     background: none;
     background-color: black;
-    box-shadow: 3px 3px 6px mediumseagreen, -3px -3px 6px mediumseagreen;
+    box-shadow: 3px 3px 4px mediumseagreen, -3px -3px 4px mediumseagreen;
 }
 
 .selected {
