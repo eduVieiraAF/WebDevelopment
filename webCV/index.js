@@ -8,3 +8,4 @@ window.onhashchange = function(e) {
     oldLink && oldLink.classList.remove('selected')
     newLink && newLink.classList.add('selected')
 }
+
