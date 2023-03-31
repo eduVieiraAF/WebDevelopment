@@ -49,7 +49,7 @@ body {
 }
 
 .exercicio .destaque {
-    border: solid 10px greenyellow;
-    color: greenyellow;
+    border: solid 10px darkcyan;
+    color: crimson;
     font-weight: bold;
 }

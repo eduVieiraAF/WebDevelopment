@@ -7,10 +7,27 @@
 </head>
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
+    <div class="segundo">Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        document.getElementById("primeiro").innerHTML = "Hello, world"
+        document.getElementById("primeiro").classList.add("destaque")
+
+        const divs = document.getElementsByTagName('div')
+        Array.from(divs).forEach(it => it.classList.remove('destaque'))
+
+        const divArray = [...divs]
+        divArray.forEach(it => it.classList.add('destaque'))
+
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for (let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
+
+        const meioElementos = document.getElementsByClassName('segundo')
+        for (let e of meioElementos) {
+            e.classList.remove('destaque')
+        }
     </script>
 </body>
 </html>
