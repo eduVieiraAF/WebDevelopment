@@ -22,16 +22,27 @@
 
 <body class="conteudo exercicio">
     <h1>Formulário</h1>
-    <form name="pesquisa" action="http://www.google.com.br/search">
+    <form name="pesquisa" action="http://www.google.com.br/search" target=”_blank”>
         <input type="text" name="q" placeholder="Digite o termo...">
         <select name="hl">
             <option value="pt-br">Português (Brasil)</option>
-            <option value="en-us">Inglês (Americano)</option>
+            <option value="en-us">English (USA)</option>
+            <option value="fr-fr">Français (France)</option>
         </select>
-        <button>Pesquisar</button>
+        <button name="go">Pesquisar</button>
     </form>
     <script>
-        // ...
+        console.log(document.forms)
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa'))
+        console.log(document.getElementsByTagName('form'))
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+
+        document.pesquisa.q.value = 'Linux'
+        document.pesquisa.hl.value = 'en-us'
+
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 
