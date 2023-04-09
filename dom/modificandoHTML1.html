@@ -9,7 +9,22 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector("body")
+        const div1 = document.createElement("div")
+        const div2 = document.createElement("div")
+        const div3 = document.createElement("div")
+        const p = document.createElement("p")
+        
+        div1.classList.add("destaque")
+        div1.innerHTML = "Div #1"
+
+        div2.classList.add("destaque")
+        div2.setAttribute('wm-att1', 'someValue')
+        div2.innerHTML = "Div #2"
+
+        p.innerHTML = "3rd element"
+
+        div3.appendChild(p) // adding the 'p' created ↑
     </script>
 </body>
 
