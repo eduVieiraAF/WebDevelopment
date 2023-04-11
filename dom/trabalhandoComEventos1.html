@@ -9,9 +9,25 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!--onclick="goIn5secs(event)"-->
+        <a wait-5-sec href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+        function goIn5secs(e) {
+            e.preventDefault()
+            console.log('5 seconds...')
+
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        // const a = document.querySelector('a')
+        // a.onclick = goIn5secs
+
+        const delay = document.querySelector('[wait-5-sec]')
+        delay.onclick = goIn5secs
+
     </script>
 </body>
