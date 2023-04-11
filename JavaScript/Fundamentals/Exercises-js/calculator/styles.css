@@ -22,7 +22,7 @@ body {
 .calc-grid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid aliceblue;
     outline: none;
     background-color: #8FB0BD;
     border-radius: 15px;
@@ -54,7 +54,7 @@ body {
 .output {
     grid-column: 1 / -1;
     padding: 10px;
-    background: linear-gradient(to right, #0b1214, #0e1519);
+    background: linear-gradient(to right, #0b1214, #132129);
     color: #8FB0BD;
     margin-bottom: 5px;
     border-radius: 15px;
