@@ -49,8 +49,8 @@ body {
 }
 
 .exercicio .destaque {
-    border: solid 10px darkcyan;
-    color: crimson;
+    border: solid 10px burlywood;
+    color: white;
     font-weight: bold;
 }
 
