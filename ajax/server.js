@@ -27,4 +27,10 @@ app.post('/upload', (req, res) => {
     })
 })
 app.get('/test', (req, res) => res.send(`all good here → ${ new Date }`))
+app.post('/formulario', (req, res) => {
+    res.send({
+        ...req.body, 
+        id: 15
+    })
+})
 app.listen(8080, () => console.log('Server running...'))
