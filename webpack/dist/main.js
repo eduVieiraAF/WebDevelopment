@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/main.js":
@@ -16,7 +15,28 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _person__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./person */ \"./src/person.js\");\n\r\n\r\n\r\nconst assistant = new _person__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\nconsole.log(assistant.greet())\r\n\n\n//# sourceURL=webpack://chapter-webpack/./src/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _person__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./person */ \"./src/person.js\");\n/* harmony import */ var _modulos_moduloA__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modulos/moduloA */ \"./src/modulos/moduloA.js\");\n/* harmony import */ var _modulos_moduloA__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modulos_moduloA__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nconst assistant = new _person__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\nconsole.log(assistant.greet())\r\n\n\n//# sourceURL=webpack://chapter-webpack/./src/main.js?");
+
+/***/ }),
+
+/***/ "./src/modulos/moduleB.js":
+/*!********************************!*\
+  !*** ./src/modulos/moduleB.js ***!
+  \********************************/
+/***/ ((module) => {
+
+eval("module.exports = {\r\n    greet() { return \"Howdye!\" }\r\n}\n\n//# sourceURL=webpack://chapter-webpack/./src/modulos/moduleB.js?");
+
+/***/ }),
+
+/***/ "./src/modulos/moduloA.js":
+/*!********************************!*\
+  !*** ./src/modulos/moduloA.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const moduloB = __webpack_require__(/*! ./moduleB */ \"./src/modulos/moduleB.js\")\r\nconsole.log(moduloB.greet())\n\n//# sourceURL=webpack://chapter-webpack/./src/modulos/moduloA.js?");
 
 /***/ }),
 
@@ -26,6 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _per
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Person)\n/* harmony export */ });\nclass Person {\r\n    greet() {\r\n        return \"G'day!\"\r\n    }\r\n}\n\n//# sourceURL=webpack://chapter-webpack/./src/person.js?");
 
 /***/ })
@@ -57,6 +78,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
