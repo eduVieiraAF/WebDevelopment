@@ -14,6 +14,18 @@
     <div>2</div>
 
     <script>
-        // ...
+        $('div').hide().fadeIn(3000)
+        console.log($('div').get(1))
+        console.log(jQuery('div').get(0))
+        console.log(jQuery.inArray(3, [0, 1, 2, 3]))
+        console.log($.isEmptyObject({name: null}))
+
+        $.fn.fundoVerde = function() {
+            this.css('background-color', 'gray')
+
+            return this // allows for chaining using jQuery
+        }
+
+        $('body').fundoVerde().fadeOut(4000).fadeIn(1000)
     </script>
 </body>
