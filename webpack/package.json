@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "8.0.0",
+    "sass-loader": "13.2.2",
     "mini-css-extract-plugin": "2.7.5",
     "css-loader": "6.7.3",
     "style-loader": "3.3.2",
