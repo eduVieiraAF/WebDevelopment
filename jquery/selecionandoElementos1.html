@@ -49,6 +49,26 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        // $('[wm-obrigatorio]').remove()
+        $('[wm-obrigatorio]').removeClass("destaque")
+        $('li.opcional').removeClass("destaque")
+        $('div p span').addClass('destaque').fadeOut(5000)
+
+        // only in Jquery
+        $('li:first').css('border', 'solid 2px white')
+        $('li:odd').css('text-shadow', '2px 2px 2px green')
+        $('li:even').css('text-shadow', '2px 2px 2px darkcyan')
+        $("li:gt(1)").css('border', "1px dotted")//.fadeOut(9000)
+        $("li:not(:last)").css('color', 'black')
+        $('li:contains("v")').css('padding', '10px 20px 15px')
+
+        $('form *').hide()
+        $('form :text').fadeIn(600)
+        $('form :password').fadeIn(600)
+        $('form :checkbox').fadeIn(2000)
+        $('form :radio').fadeIn(2000)
+        $('form :file').show(1000)
     </script>
 </body>
