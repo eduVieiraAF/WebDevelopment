@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>Modificando HTML #01</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-    <script src='js/jquery.js'></script>
-</head>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/jquery.js"></script>
+  </head>
 
-<body class='conteudo exercicio'>
+  <body class="conteudo exercicio">
     <h1>Modificando HTML #01</h1>
-    <div id='conteudo1'></div>
-    <div id='conteudo2'></div>
-    <div id='conteudo3'></div>
+    <div id="conteudo1"></div>
+    <div id="conteudo2"></div>
+    <div id="conteudo3"></div>
+    <div>NO ID</div>
 
     <script>
-        // ...
+      // conteúdo 1
+      $("#conteudo1").append("<p>Hello world</p>");
+
+      // conteúdo 2
+      const elements = [
+        $("<li></li>").append("item 1"),
+        $("<li>").append("item 2"),
+        $("<li>").append("item 3"),
+      ];
+      const list = $("<ul><li>new item</li></li>").prepend(elements); //.append(elements)
+
+      $("#conteudo2").append(list);
+
+      // conteúdo 3
+      $('#conteudo3').append('<h1>1</h1>').append('<h2>2</h2>').prepend('<h1>0</h1>')
+      $('#conteudo3').append(['<p>they see me rollin...</p>', '<p>they hatin..</p>'])
+
+      $('#conteudo3').html('<h1>123</h1>')
+      $('#conteudo3').text('<h1>do not use quotes</h1>')
+
+      // todos
+      $('div[id]').html('<strong>ALL ELEMENTS</strong>').hide().fadeIn(1500)
     </script>
-</body>
+  </body>
+</html>
