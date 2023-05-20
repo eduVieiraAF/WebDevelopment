@@ -17,9 +17,33 @@
     <h1>Eventos #01</h1>
     <div id='posicao'></div>
     <div id='cliques'>Cliques: 0</div>
-    <input type="text" placeholder="Cor de Background">
+    <input type="text" placeholder="Colour">
 
     <script>
-        // ...
+        function mostraPosicaoMouse(e) {
+            $('#posicao').html(`x: ${e.clientX} | y: ${e.clientY}`)
+        }
+
+        $('body').on('mousemove', mostraPosicaoMouse)
+        $('#posicao').mouseover(e => {
+            $('body').off('mousemove', mostraPosicaoMouse)
+        })
+
+        $('#posicao').mouseleave(e => {
+            $('body').on('mousemove', mostraPosicaoMouse)
+        })
+
+        let clicks = 0
+        $('body').click(e => $('#cliques').html(`Cliques: ${++clicks}`))
+
+        const backgroundOriginal = $('bosy').css('background-color')
+
+        $('input').keyup(function (e) {
+            const value = $(this).val()
+            console.log(value)
+
+            if (value.match(/#[\da-fA-F]{3,6}/)) $('body').css('background-color', value)
+            else $('body').css('background-color', backgroundOriginal)
+        })
     </script>
 </body>
