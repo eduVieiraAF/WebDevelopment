@@ -15,13 +15,37 @@
         Texto 1
         {{ 3 ** 3 }}
         Texto 2
-        {{ console.log('Funcionou!') }}
+        {{ console.log('it worked!') }}
         Texto 3
-        {{ (function() { return 'Legal!!!' })() }}
+        {{ (function() { return 'Nice!!!' })() }}
         Texto Final
     </div>
 
     <script>
-        // ...
+        // const $ = { nome: "not jQuery" }
+        (function ($) {
+            $.fn.convertFromHTML = function () {
+              const removeBraces = s => s.substring(2, s.length - 2)
+              const content = $(this).html()
+              const expWithinBraces = content.match(/\{\{.+\}\}/g)
+          
+              if (expWithinBraces) {
+                const exp = expWithinBraces.map(removeBraces)
+                const outcome = exp.map(e => eval(e))
+          
+                let finalOutcome = content
+                for (let i = 0; i < expWithinBraces.length; i++) {
+                  finalOutcome = finalOutcome.replace(
+                    expWithinBraces[i],
+                    outcome[i]
+                  )
+                }
+          
+                $(this).html(finalOutcome)
+              }
+            }
+          })(jQuery)
+
+        $('div').convertFromHTML()
     </script>
 </body>
