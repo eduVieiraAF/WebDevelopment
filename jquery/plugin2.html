@@ -9,10 +9,13 @@
 </head>
 
 <body>
-    <h1>Plugin #02 - Temporizador</h1>
+    <h1>Plugin #02 - Timer</h1>
     <div></div>
     <script src="js/temporizador.js"></script>
     <script>
-        // ...
+        $('div').temporizador({
+            message: "A new home coming soon",
+            time: '21:00:48'
+        }).hide().fadeIn(1500)
     </script>
 </body>
