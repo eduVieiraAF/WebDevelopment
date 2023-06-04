@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -20,33 +20,86 @@
   </head>
   <body>
     <div class="container">
-    <!-- <div class="row row-cols-md-2 row-cols-lg-4 row-cols-sm-1"> -->
-    <div class="row row-cols-2 gy-lg-3 gy-sm-2">
+      <!-- <div class="row row-cols-2 gy-2">
         <div class="col-12">
-            <div class="box"></div>
+          <div class="box"></div>
         </div>
         <div class="col">
-            <div class="box"></div>
+          <div class="box"></div>
         </div>
         <div class="col">
-            <div class="box"></div>
+          <div class="box"></div>
         </div>
         <div class="col">
-            <div class="box"></div>
+          <div class="box"></div>
         </div>
         <div class="col">
-            <div class="box">
-                <div class="row">
-                    <div class="col">
-                        <div class="box my-1"></div>
-                    </div>
-                    <div class="col">
-                        <div class="box my-1"></div>
-                    </div>
-                </div>
+          <div class="box">
+            <div class="row">
+              <div class="col">
+                <div class="box my-1"></div>
+              </div>
+              <div class="col">
+                <div class="box my-1"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div> -->
+      <!-- <div class="table-responsive">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>First</th>
+              <th>Last</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr>
+              <td>Kevin</td>
+              <td>Hart</td>
+              <td>39</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>Melissa</td>
+              <td>McCarthy</td>
+              <td>34</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>Elliot</td>
+              <td>Goldberg</td>
+              <td>31</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+      <form>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control form-control-sm" placeholder="example@email.com" >
+        <button>Submit</button>
+        <br>
+        <input type="color" class="form-control-color">
+        <br>
+        <input type="range" class="form-range">
+        <select class="form-select form-select-sm">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <div class="form-check">
+            <label for="check">check</label>
+            <input id="check" type="checkbox" class="form-check-input">
+        </div>
+        <div class="form-check form-switch">
+            <label for="toggle">toggle</label>
+            <input id="toggle" type="checkbox" class="form-check-input">
+        </div>
+      </form>
     </div>
-</div>
   </body>
 </html>
