@@ -100,8 +100,8 @@
             <input id="toggle" type="checkbox" class="form-check-input">
         </div>
       </form> -->
-      <form novalidate>
-          <!-- <label for="text" class="form-label">Amount</label>
+      <!-- <form novalidate> -->
+      <!-- <label for="text" class="form-label">Amount</label>
           <div class="input-group input-group-lg">
             <div class="input-group-text">$</div>
             <input type="number" class="form-control" id="text"/>
@@ -109,31 +109,63 @@
             <div class="input-group-text">USD</div>
             <button class="btn btn-success">+</button>
         </div> -->
-        <!-- <div class="form-floating">
+      <!-- <div class="form-floating">
           <input type="email" id="email" class="form-control form-control-sm" placeholder="Email" required>
           <label for="email">Email</label>
           <div class="invalid-feedback">invalid email</div>
           <div class="valid-feedback">correct email</div>
         </div>
         <button>Submit</button> -->
-      </form>
+      <!-- </form> -->
       <!-- <div class=" btn-group-lg btn-group-vertical">
         <button class="btn btn-outline-dark btn-sm active" data-bs-toggle="button" aria-pressed="true">TEST</button>
         <a class="btn btn-outline-dark btn-lg" href="#">Test</a>
       </div> -->
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <h1>Warning</h1>
         <a href="www.google.com" class="alert-link">find out why</a>
         <button class="btn-close" aria-label="close" data-bs-dismiss='alert'></button>
+      </div> -->
+      <div class="card group">
+        <div class="card" style="width: 300px">
+          <h1 class="card-header">Header</h1>
+          <img class="card-img" src="layers.png"/>
+          <div class="card-body card-img-top">
+            <h2 class="card-title">Text</h2>
+            <div class="card-subtitle">Subtitle</div>
+            <h4 class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et debitis
+              porro minus soluta aliquam repudiandae dolore quisquam, beatae deserunt,
+              suscipit atque autem optio consequuntur nihil perferendis eaque velit
+              consectetur perspiciatis?
+            </h4>
+            <div class="card-footer">footer</div>
+          </div>
+        </div>
+        <div class="card" style="width: 300px">
+          <h1 class="card-header">Header</h1>
+          <img class="card-img" src="layers.png"/>
+          <div class="card-body card-img-top">
+            <h2 class="card-title">Text</h2>
+            <div class="card-subtitle">Subtitle</div>
+            <h4 class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et debitis
+              porro minus soluta aliquam repudiandae dolore quisquam, beatae deserunt,
+              suscipit atque autem optio consequuntur nihil perferendis eaque velit
+              consectetur perspiciatis?
+            </h4>
+            <div class="card-footer">footer</div>
+          </div>
+        </div>
       </div>
     </div>
     <script>
-      const form = document.querySelector("form")
-               
-      form.addEventListener('submit', e => {
-        if (!form.checkValidity()) e.preventDefault()
-        form.classList.add('was-validated')
-      })
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        if (!form.checkValidity()) e.preventDefault();
+        form.classList.add("was-validated");
+      });
     </script>
   </body>
 </html>
