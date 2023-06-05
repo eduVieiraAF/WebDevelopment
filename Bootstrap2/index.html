@@ -100,7 +100,7 @@
             <input id="toggle" type="checkbox" class="form-check-input">
         </div>
       </form> -->
-      <form>
+      <form novalidate>
           <!-- <label for="text" class="form-label">Amount</label>
           <div class="input-group input-group-lg">
             <div class="input-group-text">$</div>
@@ -110,11 +110,21 @@
             <button class="btn btn-success">+</button>
         </div> -->
         <div class="form-floating">
-          <input type="email" id="email" class="form-control form-control-sm" placeholder="Email" >
+          <input type="email" id="email" class="form-control form-control-sm" placeholder="Email" required>
           <label for="email">Email</label>
+          <div class="invalid-feedback">invalid email</div>
+          <div class="valid-feedback">correct email</div>
         </div>
         <button>Submit</button>
       </form>
     </div>
+    <script>
+      const form = document.querySelector("form")
+               
+      form.addEventListener('submit', e => {
+        if (!form.checkValidity()) e.preventDefault()
+        form.classList.add('was-validated')
+      })
+    </script>
   </body>
 </html>
