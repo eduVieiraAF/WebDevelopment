@@ -42,7 +42,9 @@
 </div>
 
 <div class="dropdown">
-  <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">BUY NOW</button>
+  <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">
+    BUY NOW
+  </button>
   <div class="dropdown-menu">
     <a href="#" class="dropdown-item">Paypal</a>
     <a href="#" class="dropdown-item">Wise</a>
@@ -66,15 +68,24 @@
 <!-- Progresso -->
 <div>
   <div class="progress mb-3">
-    <div class="progress-bar" style="width: 25%;"></div>
+    <div class="progress-bar" style="width: 25%"></div>
   </div>
   <div class="progress mb-3">
-    <div class="progress-bar progress-bar-striped bg-danger" style="width: 45%;">45%</div>
+    <div class="progress-bar progress-bar-striped bg-danger" style="width: 45%">
+      45%
+    </div>
   </div>
-  <div class="progress mb-3" style="height: 40px;">
-    <div class="progress-bar progress-bar-striped bg-danger" style="width: 15%;">15%</div>
-    <div class="progress-bar progress-bar-striped bg-warning" style="width: 35%;">35%</div>
-    <div class="progress-bar bg-success" style="width: 50%;">50%</div>
+  <div class="progress mb-3" style="height: 40px">
+    <div class="progress-bar progress-bar-striped bg-danger" style="width: 15%">
+      15%
+    </div>
+    <div
+      class="progress-bar progress-bar-striped bg-warning"
+      style="width: 35%"
+    >
+      35%
+    </div>
+    <div class="progress-bar bg-success" style="width: 50%">50%</div>
   </div>
 </div>
 
@@ -92,19 +103,18 @@
 
 <!-- Alertas -->
 <div>
-  <div class="alert alert-success">
-    Task finished successfully!
-  </div>
+  <div class="alert alert-success">Task finished successfully!</div>
   <div class="alert alert-warning">
     Check your <strong>banking</strong> information.
   </div>
   <div class="alert alert-danger">
-    <strong>ERROR</strong> → your application is not <strong>valid</strong>!<br>
+    <strong>ERROR</strong> → your application is not
+    <strong>valid</strong>!<br />
     <a href="#" class="alert-link">See why</a>
   </div>
   <div class="alert alert-info">
     <div class="alert-heading">INFO</div>
-    <hr>
+    <hr />
     <p>To subscribe to our service, make sure you understand our policy!</p>
   </div>
 </div>
@@ -157,11 +167,15 @@
 <hr />
 
 <!-- Tooltip -->
-<div class="alert alert-warning">
-  Precisa chamar uma função JS
-</div>
-<button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Think it through">DELETE</button>
-
+<div class="alert alert-warning">Precisa chamar uma função JS</div>
+<button
+  class="btn btn-danger"
+  data-toggle="tooltip"
+  data-placement="top"
+  title="Think it through"
+>
+  DELETE
+</button>
 
 <h1 class="mt-5">
   6. Slider -
@@ -176,6 +190,27 @@
 <hr />
 
 <!-- Slider -->
+<div>
+  <div class="carousel slide" id="slider" data-ride="carousel">
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img src="/imgs/slide1.png" alt="slide1" class="d-block mx-auto" />
+      </div>
+      <div class="carousel-item">
+        <img src="/imgs/slide2.png" alt="slide2" class="d-block mx-auto" />
+      </div>
+      <div class="carousel-item">
+        <img src="/imgs/slide3.png" alt="slide3" class="d-block mx-auto" />
+      </div>
+    </div>
+    <a href="#slider" class="carousel-control-prev" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a href="#slider" class="carousel-control-next" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
 
 <h1 class="mt-5">
   7. Accordion -
@@ -192,5 +227,5 @@
 <!-- Accordion -->
 
 <script>
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 </script>
