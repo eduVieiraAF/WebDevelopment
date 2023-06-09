@@ -21,3 +21,75 @@
 </p>
 
 <!-- Formulário -->
+<div class="card">
+  <div class="card-header">
+    <h5 class="mb-1">Exemplo de formulário</h5>
+    <div class="card-body">
+      <form action="" class="container-fluid">
+        <div class="form-row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="nome">Nome completo:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                placeholder="Digite seu nome..."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-12 col-md-6">
+            <div class="form-group mt-3">
+              <label for="email">E-mail</label>
+              <input
+                class="form-control"
+                type="email"
+                id="email"
+                placeholder="example@host.com"
+              />
+            </div>
+          </div>
+          <div class="mt-4">OR</div>
+          <div class="col-12 col-md-6">
+            <div class="form-group mt-3">
+              <label for="email">E-mail</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Seu e-mail..."
+                />
+              </div>
+              <small class="form-text text-primary">Enviaremos sua confirmação no e-mail informado</small>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label for="linguagemPreferida">Linguagem</label>
+              <select  id="linguagemPreferida" class="from-control">
+                <option value="">Selecione</option>
+                <option>JavaScript</option>
+                <option>TypeScript</option>
+                <option>Kotlin</option>
+                <option>Python</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="form-row mb-0">
+          <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-primary mr-2" type="submit">Salvar</button>
+            <button class="btn btn-danger" type="reset">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
