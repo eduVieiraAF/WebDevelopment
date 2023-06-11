@@ -24,6 +24,11 @@ body {
  .nav-item:hover {
     text-shadow: 1px 1px 2px crimson;
   }
+
+  .border {
+    /* border-radius: 10px; */
+    box-shadow: 3px 3px 6px darkslateblue;
+  }
   
 nav {
   background-color: cornflowerblue;
