@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Primeiro from './components/Primeiro'
 
-const title1 = <h1>React Sample</h1>
+const title1 = <Primeiro />
 const root = document.getElementById('root')
 
 ReactDOM.render(title1, root)
