@@ -42,7 +42,7 @@
     background: hsl(0, 100%, 40%, 0.1);
     border: 1px solid hsl(0, 69%, 53%);
     color: hsl(0, 69%, 53%);
-    margin-left: 25px;
+    margin-right: 25px;
   }
   
   .btn.btn-danger:hover,
@@ -140,4 +140,10 @@
   
   .list li:has(input:checked) label:hover::before {
     background: hsl(200, 100%, 30%);
+  }
+
+  .itemLabel {
+    font-size: larger;
+    margin-bottom: 2px;
+    text-shadow: 1px 1px 4px dodgerblue, -1px -1px 4px dodgerblue ;
   }
