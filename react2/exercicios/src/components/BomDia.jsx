@@ -19,6 +19,7 @@ export default props => (
   <div>
     <h1>Bom dia, {props.nome}! </h1>
     <h2>Sua idade é {props.idade}</h2>
+    <hr />
   </ div>
 );
 
