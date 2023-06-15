@@ -1,0 +1,35 @@
+:root {
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #3a3737;
+}
+
+.button {
+    font-size: 1.4em;
+    background-color: var(--bg-button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+
+}
+
+button:active {
+    opacity: 85%;
+}
+
+button.double {
+    grid-column: span 2;
+}
+
+button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background: linear-gradient(to left, rgb(75, 121, 161), rgb(40, 62, 81));
+    color: white;
+}
+
+.button.operation:active {
+    background:  rgb(40, 62, 81);
+}
