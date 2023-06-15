@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Calculator from './main/Calculator';
 
+class Title extends React.Component {
+  componentDidMount() {
+    document.title = "Calculator"
+  }
+
+  render() {
+    return <h1>Calculator</h1>
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
-    <h1>Calculator</h1>
+    <Title/>
+    {/* <h1>Calculator</h1> */}
     <Calculator />
     </>
   </React.StrictMode>
