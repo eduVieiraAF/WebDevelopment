@@ -18,7 +18,6 @@ root.render(
   <React.StrictMode>
     <>
     <Title/>
-    {/* <h1>Calculator</h1> */}
     <Calculator />
     </>
   </React.StrictMode>
