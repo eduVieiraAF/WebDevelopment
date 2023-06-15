@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Calculator.css";
 import Button from "../components/Button";
 import Display from "../components/Display";
-import { values } from "lodash";
 
 const initialState = {
   displayValue: "0",
