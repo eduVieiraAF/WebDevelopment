@@ -1,5 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 /* eslint-disable no-unused-vars */
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 import React from "react";
 import './App.css'
 import Logo from "../components/template/Logo";
@@ -11,6 +13,6 @@ export default props =>
     <div className="app">
         <Logo></Logo>
         <Nav></Nav>
-        <Main></Main>
+        <Main icon="home" title="Start" subtitle="Course Project"></Main>
         <Footer></Footer>
     </div>
