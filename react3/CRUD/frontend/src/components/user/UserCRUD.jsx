@@ -18,6 +18,13 @@ const initialStatte = {
 export default class UserCRUD extends Component {
   state = { ...initialStatte };
 
+  componentWillMount() {
+    axios(baseURL).then((resp) => {
+      this.setState({ list: resp.data });
+      console.log(resp.statusText);
+    });
+  }
+
   clear() {
     this.setState({ user: initialStatte.user });
   }
@@ -25,6 +32,7 @@ export default class UserCRUD extends Component {
   updateFields(event) {
     const user = { ...this.state.user };
     user[event.target.name] = event.target.value;
+
     this.setState({ user });
   }
 
@@ -62,7 +70,10 @@ export default class UserCRUD extends Component {
         <hr />
         <div className="row">
           <div className="col-12 d-flex justify-content-end">
-            <button className="btn btn-primary m-2" onClick={(e) => this.save(e)}>
+            <button
+              className="btn btn-primary m-2"
+              onClick={(e) => this.save(e)}
+            >
               SAVE
             </button>
             <button
@@ -77,9 +88,39 @@ export default class UserCRUD extends Component {
     );
   }
 
-  renderTable() {}
+  renderTable() {
+    return (
+      <table className="table mt-4">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>{this.renderRows()}</tbody>
+      </table>
+    );
+  }
 
-  renderRow() {}
+  renderRows() {
+    return this.state.list.map((user) => {
+      return (
+        <><tr key={user.id}>
+          <td>ID → {user.id} | {user.name}</td>
+          <td>{user.email}</td>
+          <td>
+            <button className="btn btn-warning m-2" onClick={() => this.load(user)}>
+              <i className="fa fa-pencil"></i>
+            </button>
+            <button className="btn btn-danger m-2" onClick={() => this.remove(user)}>
+              <i className="fa fa-trash"></i>
+            </button>
+          </td>
+        </tr><hr /></>
+      )
+    });
+  }
 
   save() {
     const user = this.state.user;
@@ -91,16 +132,30 @@ export default class UserCRUD extends Component {
     });
   }
 
-  getUpdatedList(user) {
+  getUpdatedList(user, add = true) {
     const list = this.state.list.filter((u) => u.id !== user.id);
-    list.unshift(user);
+    if (add) list.unshift(user);
 
     return list;
   }
 
+  load(user) {
+    this.setState({ user });
+  }
+
+  remove(user) {
+    axios.delete(`${baseURL}/${user.id}`).then((resp) => {
+      const list = this.getUpdatedList(user, false);
+      this.setState({ list });
+    });
+  }
+
   render() {
+    // console.log(this.state.list)
     return <Main {...headerProps}>
-        {this.renderForm()}
-    </Main>;
+      {this.renderForm()}
+      <hr />
+      {this.renderTable()}
+      </Main>;
   }
 }

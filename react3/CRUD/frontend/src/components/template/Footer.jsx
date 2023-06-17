@@ -4,7 +4,7 @@ import './Footer.css'
 
 export default props => 
     <footer className="footer">
-        <span>Developed by <i className="fa fa-heart text-danger"></i
+        <span><strong>Developed by → </strong>&nbsp; <i className="fa fa-heart text-danger"></i
         ><strong><span className="text-danger">&nbsp; eduVieiraAF</span></strong>
         </span>
     </footer>
