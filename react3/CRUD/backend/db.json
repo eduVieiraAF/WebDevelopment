@@ -1,14 +1,19 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Jason Morgan",
-            "email": "j_morgan@yahoo.au"
-        },
-        {
-            "id": 2,
-            "name": "Morgan Jason",
-            "email": "jason.morgan@yahoo.fr"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Jason Morgan",
+      "email": "j_morgan@yahoo.au"
+    },
+    {
+      "id": 2,
+      "name": "Morgan Jason",
+      "email": "jason.morgan@yahoo.fr"
+    },
+    {
+      "name": "EDUARDO V A FONSECA",
+      "email": "edu_vieira@hotmail.com",
+      "id": 3
+    }
+  ]
 }
