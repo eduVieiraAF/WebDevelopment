@@ -14,9 +14,9 @@ const EmployeeListing = () => {
 
     return (
         <div className="container">
-            <div className="card p-1">
-                <div className="card-title bg-dark text-warning pt-2">
-                    <h2>List of Employee</h2>
+            <div className="card mt-3">
+                <div className="card-title bg-dark text-warning pt-2 rounded-top">
+                    <h2>List of Employees</h2>
                 </div>
                 <div className="card-body">
                     <table className='table table-bordered'>

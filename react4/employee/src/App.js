@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>| REACT JS → CRUD |</h1>
+        <h1 className='bg-dark text-info p-3 title'>| REACT JS → CRUD |</h1>
       </div>
       <BrowserRouter>
         <Routes>
