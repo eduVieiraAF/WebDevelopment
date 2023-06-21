@@ -5,6 +5,18 @@
       "name": "eduardVieiraAF",
       "email": "edu@edu.com",
       "phone": 788421545
+    }, 
+    {
+      "id": 2,
+      "name": "Sofia",
+      "email": "sofia@gmail.com",
+      "phone": 788321545
+    },
+    {
+      "id": 3,
+      "name": "Daniel",
+      "email": "dani@gmail.com",
+      "phone": 788321845
     }
   ]
 }
