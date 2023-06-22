@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Conceitos Básicos</title>
-    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/estilo.css" />
     <script src="/js/vue.min.js"></script>
-</head>
-<body class="exercicio">
-
+  </head>
+  <body class="exercicio">
+    <div id="app">
+      <h1>Basic concepts</h1>
+      <hr />
+      <p>1 → {{ 2 + 2 }}</p>
+      <p>2 → {{ "uppercase".toUpperCase() }}</p>
+      <p>
+        3 → Product: {{name}} @ {{price}}$ | {{discount * 100}}% discount
+        available • {{priceWithDiscount}}$
+      </p>
+      <p>4 → Time: {{tellTime()}}</p>
+    </div>
     <script>
-        // ...
+      new Vue({
+        el: "#app",
+        data: {
+          name: "hose",
+          price: 7.44,
+          discount: 0.15,
+        },
+        methods: {
+          tellTime() {
+            return new Date().toLocaleString();
+          },
+        },
+        computed: {
+            priceWithDiscount() {
+                return this.price * (1 - this.discount)
+            }
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

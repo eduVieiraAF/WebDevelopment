@@ -28,13 +28,15 @@ body {
 .exercicio {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    float: left;
+    margin-left: 18px;
 
     background: #333;
-    color: #fff;
-    font-size: 3rem;
+    color: #71b8c5;
+    font-size: 2rem;
 }
 
 button, input {
