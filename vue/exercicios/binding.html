@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Binding</title>
-    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/estilo.css" />
     <script src="/js/vue.min.js"></script>
-</head>
-<body class="exercicio">
-
+  </head>
+  <body class="exercicio">
+    <div id="app">
+        <!-- <p><a v-bind:href="link">NTC</a></p> same as below -->
+        <p><a :href="link" target="_blank">NTC</a></p>
+        <p>
+            <input type="text" v-model="name"><br>
+            <span>{{ name }}</span>
+        </p>
+    </div>
     <script>
-        // ...
+      new Vue({
+        el: "#app",
+        data: {
+            link: "https://www.youtube.com/@naotecontaram.oficial",
+            name: "Dawson Miller"
+        },
+        watch: {
+            name(newValue) {
+                console.log(newValue)
+            }
+        }
+      })
     </script>
-</body>
+  </body>
 </html>
