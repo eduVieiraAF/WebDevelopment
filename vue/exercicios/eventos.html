@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Eventos</title>
-    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/estilo.css" />
     <script src="/js/vue.min.js"></script>
-</head>
-<body class="exercicio">
+  </head>
+  <body class="exercicio">
     <div id="app">
-        <p>{{ counter }}</p>
-        <p>
-            <button v-on:click="add">+1</button>
-            <!-- <button @click="minus">-1</button> -->
-            <button @click="counter--">-1</button>
-        </p>
+      <p>{{ counter }}</p>
+      <p>
+        <button v-on:click="add">+1</button>
+        <!-- <button @click="minus">-1</button> -->
+        <button @click="counter--">-1</button>
+      </p>
+      <p @mousemove = 'updatePosition'>→ Coords: {{ x }} | {{ y }}
+        <!-- <span @mousemove.stop>Don't work here</span> -->
+        <span @mousemove="stop">Don't work here</span>
+      </p>
+      <input type="text" @keyup.enter="sendAlert">
     </div>
     <script>
-        new Vue({
-            el: "#app",
-            data: {
-                counter: 0
-            },
-            methods: {
-                add(){
-                    this.counter++
-                },
-                /* minus() {
+      new Vue({
+        el: "#app",
+        data: {
+          counter: 0,
+          x: 0,
+          y: 0,
+        },
+        methods: {
+          add() {
+            this.counter++;
+          },
+          /* minus() {
                     this.counter--
                 } */
-            }
-        })
+          updatePosition(e) {
+            this.x = e.clientX;
+            this.y = e.clientY;
+          },
+          stop(e) {
+            e.stopPropagation()
+          },
+          sendAlert() {
+            alert('You hit enter!')
+          }
+        },
+      });
     </script>
-</body>
+  </body>
 </html>
