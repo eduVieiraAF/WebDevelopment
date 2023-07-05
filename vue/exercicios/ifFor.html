@@ -7,9 +7,40 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <div id="app">
+        <h2>Grades</h2>
+        <p v-for="(student, i) in students">
+            {{++i}}) {{ student.name }} • {{ student.grade }}
+            <span v-if="student.grade == 10.0"> → Highest honour</span>
+            <span v-if="student.grade >= 7"> → Approved</span>
+            <span v-else-if="student.grade >= 4"> → needs extra points </span>
+            <span v-else> → Failed </span>
+        
+        </p>
+        <hr>
+        <h2>Another way to iterate</h2>
+        <ul>
+            <li v-for="n in students"> 
+                <span v-show="n.grade >= 5">{{n.name}} → {{n.grade}}</span>
+                <span v-show="n.grade < 5">to be determined...</span>
+            </li>
+        </ul>
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                students: [
+                    { name: "Kevin", grade: 10.0 },
+                    { name: "Helen", grade: 7 },
+                    { name: "Lana", grade: 8.5 },
+                    { name: "Aaron", grade: 7 },
+                    { name: "Joshua", grade: 4.5 },
+                    { name: "Joshua", grade: 2 },
+                ]
+            }
+        })
     </script>
 </body>
 </html>
