@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"exercicios": "http-server ./exercicios -c-1",
+		"exercises": "http-server ./exercicios -c-1",
 		"qrcode": "http-server ./qrcode -c-1",
 		"sales": "http-server ./sales -c-1"
 	},

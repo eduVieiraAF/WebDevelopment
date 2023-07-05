@@ -22,7 +22,7 @@
         <ul>
             <li v-for="n in students"> 
                 <span v-show="n.grade >= 5">{{n.name}} → {{n.grade}}</span>
-                <span v-show="n.grade < 5">to be determined...</span>
+                <span v-show="n.grade < 5">{{ n.name }} → to be determined...</span>
             </li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
                     { name: "Lana", grade: 8.5 },
                     { name: "Aaron", grade: 7 },
                     { name: "Joshua", grade: 4.5 },
-                    { name: "Joshua", grade: 2 },
+                    { name: "Neil", grade: 2 },
                 ]
             }
         })
