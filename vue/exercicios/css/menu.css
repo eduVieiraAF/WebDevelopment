@@ -10,7 +10,7 @@ body {
 .menu-principal h1 {
     background: #333;
     color: #fff;
-    border-bottom: solid 5px #4faddb;
+    border-right: solid 5px #4faddb;
     padding: 15px 0px;
     margin: 0;
 }
@@ -31,4 +31,6 @@ body {
 
 .menu-principal a:hover {
     background-color: rgba(79, 173, 219, .4);
+    font-weight: bold ;
+    text-shadow: 1px 1px 4px gray;
 }
