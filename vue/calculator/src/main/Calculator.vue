@@ -57,6 +57,10 @@ export default {
                     this.values[0] = eval(
                         `${this.values[0]} ${currentOperation} ${this.values[1]}`
                     )
+                    if (isNaN(this.values[0]) || !isFinite(this.values[0])) {
+                        this.clearMemory()
+                        return
+                    }
                 } catch(err) { this.$emit('onError', err) }
 
                 this.values[1] = 0
