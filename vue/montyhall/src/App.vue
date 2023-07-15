@@ -21,7 +21,7 @@ body {
 
 h1 {
     text-shadow: 2px 2px 5px black;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 12px 12px 10px black;
     border: 5px dotted blanchedalmond;
     padding: 8px;
     border-radius: 15px;
