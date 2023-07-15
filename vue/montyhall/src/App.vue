@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>the MONTY HALL problem</h1>
+    <h1>The MONTY HALL problem</h1>
   </div>
 </template>
 
@@ -20,6 +20,18 @@ body {
 }
 
 h1 {
-    text-shadow: 2px 2px 3px darkred;
+    text-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px black;
+    border: 5px dotted blanchedalmond;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 45px;
+    /* margin-left: 8px; */
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 </style>
