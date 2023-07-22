@@ -29,13 +29,13 @@ body {
   align-items: center;
 }
 #app h1 {
-  text-shadow: 2px 2px 8px cadetblue, -2px -2px 4px black;
+  text-shadow: -2px -2px 6px slateblue, 3px 3px 6px slateblue;
   border: solid 1px cadetblue;
   width: fit-content;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 3px 3px 10px black;
+  box-shadow: 1px 1px 6px black;
   background: linear-gradient(to left, rgb(4, 63, 63), rgb(33, 25, 83));
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 </style>
