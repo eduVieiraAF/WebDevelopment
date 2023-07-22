@@ -1,0 +1,41 @@
+<template>
+  <div id="app">
+    <h1>The Monty Hall problem</h1>
+    <Gift />
+  </div>
+</template>
+
+<script>
+import Gift from "./components/Gift.vue";
+export default {
+  name: "App",
+  components: { Gift },
+};
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  color: aliceblue;
+  background: linear-gradient(to right, teal, slateblue);
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#app h1 {
+  text-shadow: 2px 2px 8px cadetblue, -2px -2px 4px black;
+  border: solid 1px cadetblue;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px black;
+  background: linear-gradient(to left, rgb(4, 63, 63), rgb(33, 25, 83));
+  margin-bottom: 35px;
+}
+</style>
