@@ -97,4 +97,19 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+button {
+  border-radius: 15px;
+  padding: 8px;
+  background-color: cadetblue;
+  font-weight: bolder;
+  border: 1px solid aquamarine;
+  box-shadow: 1px 1px 2px black;
+}
+
+button:active {
+  color: aquamarine;
+  background-color: black;
+  box-shadow: none;
+}
 </style>
