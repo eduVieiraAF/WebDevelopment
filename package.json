@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "jquery": "^3.7.0",
-    "popper.js": "1.14.3"
+    "popper.js": "1.14.3",
+    "vue-cli-plugin-vuetify": "~2.5.8"
   }
 }
