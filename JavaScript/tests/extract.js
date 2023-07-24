@@ -25,8 +25,10 @@ fs.readFile('./ccontabil.csv', 'utf-8', (err, data) => {
             }
         })
     })
-})
 
+    saveToJSON(deptArrays)
+   
+})
 
 function saveToJSON(data) {
     //console.log(data)
