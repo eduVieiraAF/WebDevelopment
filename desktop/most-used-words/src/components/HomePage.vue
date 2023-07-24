@@ -34,20 +34,22 @@ export default {
       files: [],
       groupedWords: [
         // mocked data
-        { word: "i", amount: 547 },
-        { word: "you", amount: 478 },
-        { word: "it", amount: 110 },
+        // { word: "i", amount: 547 },
+        // { word: "you", amount: 478 },
+        // { word: "it", amount: 110 },
         
       ],
     };
   },
   methods: {
     processSubtitles() {
-        ipcRenderer.send("hello", "Connected to channel")
-        ipcRenderer.on("hello", (event, data) => {
-            console.log(data)
+        let paths = this.files.map(it => it.path)
+        ipcRenderer.send("process-subtitles", paths)
+        ipcRenderer.on("process-subtitles", (event, resp) => {
+            this.groupedWords = resp
         })
-        console.log(this.files)
+
+        // console.log(this.files)
     }
   },
 };
