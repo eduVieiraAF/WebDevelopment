@@ -1,12 +1,22 @@
+/* eslint-disable no-empty-character-class */
+
 module.exports = rows => {
     return new Promise((resolve, reject) => {
         try {
-            const data = rows.filter(filterValid)
-            
+            const data = rows
+                .filter(filterValid)
+                .map(removePunctuation)
+                .map(removeTags)
+                .reduce(mergeRows)
+                .split(" ")
+                .map(word => word.toLowerCase())
+                .map(str => str.charAt(0).toUpperCase() + str.slice(1))
+                .map(quotes => quotes.replace("\"", ""))
+
             resolve(data)
-        } catch (error) {
-            console.log(error)
-            reject(error)
+        } catch (err) {
+            console.log(err)
+            reject(err)
         }
     })
 }
@@ -17,4 +27,18 @@ function filterValid(row) {
     const notInterval = !row.includes("-->")
 
     return notNumber && notEmpty && notInterval
+}
+
+
+function removePunctuation(row) {
+    return row.replace(/[,?!:;.'-]/g, "")
+}
+
+
+function removeTags(row) {
+    return row.replace(/(<[^>]+)>/g, "").trim()
+}
+
+function mergeRows(fullText, rowText) {
+    return `${fullText} ${rowText}`
 }
