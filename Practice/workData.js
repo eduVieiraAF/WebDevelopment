@@ -8,8 +8,8 @@ const jsonKeys = Object.keys(products)
 
 for (let key of jsonKeys) {
     for (let i = 0; i < products[key].length; i++) {
-       if (!products[key][i].CORREIAS || !products[key][i].__EMPTY_2) rejects.push(products[key][i])
-       else prodSortedDescription.push(products[key][i].CORREIAS.toString().trim().concat('-', products[key][i].__EMPTY_2))
+        if (!products[key][i].CORREIAS || !products[key][i].__EMPTY_2) rejects.push(products[key][i])
+        else prodSortedDescription.push(products[key][i].CORREIAS.toString().trim().concat('-', products[key][i].__EMPTY_2))
     }
 
     console.log(rejects, rejects.length)
@@ -41,7 +41,7 @@ const workSheetColumns = [
 const workbook = XLSX.utils.book_new()
 const workSheet = XLSX.utils.aoa_to_sheet([workSheetColumns.map(
     col => col.header), ...workSheetFormat]
-    )
+)
 
 XLSX.utils.book_append_sheet(workbook, workSheet, "products")
 XLSX.writeFile(workbook, "D:/WebDevelopment/Practice/SRAgricula.xlsx")
