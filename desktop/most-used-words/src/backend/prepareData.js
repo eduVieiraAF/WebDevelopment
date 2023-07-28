@@ -25,8 +25,9 @@ function filterValid(row) {
     const notNumber = !parseInt(row.trim())
     const notEmpty = !!row.trim()
     const notInterval = !row.includes("-->")
+    const notLink = !row.includes("www")
 
-    return notNumber && notEmpty && notInterval
+    return notNumber && notEmpty && notInterval && notLink
 }
 
 
