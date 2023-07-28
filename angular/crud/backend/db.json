@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Ball-point pen",
+            "price": 0.95
+        },
+        {
+            "id": 2,
+            "name": "Asus Rogue",
+            "price": 2781
+        },
+        {
+            "id": 3,
+            "name": "iPhone11",
+            "price": 2000
+        }
+    ]
+}
