@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     background-color: aliceblue;
-    color: firebrick;
+    /* color: firebrick; */
     border-radius: 10px;
 }
 
@@ -23,8 +23,4 @@ font-weight: bold;
 
 .header .title-group i {
 padding-right: 28px;
-}
-
-i {
-    
 }
