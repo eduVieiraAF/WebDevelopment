@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     background-color: aliceblue;
-    color: steelblue;
+    color: firebrick;
     border-radius: 10px;
 }
 
@@ -18,8 +18,13 @@
 
 .header .title-group {
 padding-left: 18px;
+font-weight: bold;
 }
 
 .header .title-group i {
-padding-right: 18px;
+padding-right: 28px;
+}
+
+i {
+    
 }
