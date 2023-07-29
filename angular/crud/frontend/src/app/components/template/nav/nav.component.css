@@ -1,0 +1,12 @@
+.sidenav {
+    background-color: black;
+    left: 0;
+    width: fit-content;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 2px 0px 4px slategray;
+}
+
+.sidenav i{
+    padding-right: 7px;
+}
