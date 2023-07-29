@@ -1,9 +1,13 @@
 .header {
     display: flex;
     align-items: center;
-    background-color: aliceblue;
+    background-color: gainsboro;
     /* color: firebrick; */
     border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 7px;
 }
 
 .header a {
