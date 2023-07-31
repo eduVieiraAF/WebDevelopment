@@ -8,10 +8,10 @@
     fixedBottomGap="68"
   >
     <mat-nav-list>
-      <a mat-list-item class="nav-list">
+      <a mat-list-item class="nav-list" routerLink="/">
         <i class="material-icons red v-middle">home</i> Home
       </a>
-      <a mat-list-item class="nav-list">
+      <a mat-list-item class="nav-list" routerLink="/products">
         <i class="material-icons red v-middle">local_grocery_store </i>
         Shop
       </a>
@@ -23,4 +23,7 @@
       </a>
     </mat-nav-list>
   </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>  
 </mat-sidenav-container>

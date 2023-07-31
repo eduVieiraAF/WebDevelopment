@@ -6,9 +6,6 @@
     border-radius: 10px;
     position: fixed;
     top: 0;
-    left: 0;
-    margin-left: 7px;
-    overflow: auto;
 }
 
 .header a {
