@@ -19,6 +19,8 @@ import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 import { AboutComponent } from './views/about/about.component';
 import { ReportComponent } from './views/report/report.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ReportComponent } from './views/report/report.component';
     RedDirective,
     ForDirective,
     AboutComponent,
-    ReportComponent
+    ReportComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
