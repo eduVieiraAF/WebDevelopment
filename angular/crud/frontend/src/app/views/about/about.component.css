@@ -9,10 +9,21 @@
     font-size: 2.3rem;
     padding-bottom: 4px;
     margin-bottom: 7px;
-    border-bottom: solid 1px;
+    border-bottom: dotted 1px grey;
 }
 
 .subtitle {
     color: slategray;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: "• ";
+    font-weight: bold;
+}
+
+div {
+    overflow: auto;
 }
