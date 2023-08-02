@@ -20,9 +20,10 @@
     padding: 16px;
     background-color: white;
     position: fixed;
-    /* margin-top: 64px; */
+    margin-top: 64px;
     color: black;
     height: 300px;
     width: fit-content;
     height: fit-content;
 }
+

@@ -36,7 +36,7 @@
         let clicks = 0
         $('body').click(e => $('#cliques').html(`Cliques: ${++clicks}`))
 
-        const backgroundOriginal = $('bosy').css('background-color')
+        const backgroundOriginal = $('body').css('background-color')
 
         $('input').keyup(function (e) {
             const value = $(this).val()
