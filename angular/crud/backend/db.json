@@ -24,6 +24,16 @@
       "name": "test",
       "price": 100000,
       "id": 5
+    },
+    {
+      "name": "eduardo",
+      "price": "10000",
+      "id": 6
+    },
+    {
+      "name": "keyboard",
+      "price": "35.55",
+      "id": 7
     }
   ]
 }

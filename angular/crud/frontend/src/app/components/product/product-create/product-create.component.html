@@ -1,6 +1,24 @@
-<button mat-raised-button (click)="popBack()" title="Go back" color="secondary">
-  <i class="material-icons" v-middle appRed>keyboard_backspace</i>
-</button>
-<button mat-raised-button (click)="createProduct()" title="ADD">
-  <i class="material-icons" appRed>add</i> Add new
-</button>
+<mat-card class="card">
+  <mat-card-title class="title">New Product</mat-card-title>
+  <form>
+    <mat-form-field >
+      <input matInput placeholder="name" [(ngModel)]="product.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="price" [(ngModel)]="product.price" name="price">
+    </mat-form-field>
+  </form>
+  <div>
+    <button
+    mat-raised-button
+    (click)="popBack()"
+    title="cancel"
+    >
+    <i class="material-icons" v-middle appRed>keyboard_backspace</i>
+    Cancel
+  </button>
+  <button mat-raised-button (click)="createProduct()" title="add">
+    <i class="material-icons" appRed>save</i> Save
+  </button>
+</div>
+</mat-card>
