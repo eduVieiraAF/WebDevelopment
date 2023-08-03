@@ -2,6 +2,7 @@ import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router }from '@angular/router'
 import { Product } from '../product.model';
+import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-product-create',
@@ -25,9 +26,13 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage("Product added")
-      this.router.navigate(['/products'])
-    })
+
+    if (this.product.name === "" || this.product.price === 0) this.productService.showMessage("You cannot have empty fields")
+    else {
+      this.productService.create(this.product).subscribe(() => {
+        this.productService.showMessage("Product added")
+        this.router.navigate(['/products'])
+      })
+    }
   }
 }

@@ -26,6 +26,7 @@ import { ForDirective } from './directives/for.directive';
 import { AboutComponent } from './views/about/about.component';
 import { ReportComponent } from './views/report/report.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
 
@@ -41,7 +42,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     ForDirective,
     AboutComponent,
     ReportComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent
   ],
   imports: [
     BrowserModule,

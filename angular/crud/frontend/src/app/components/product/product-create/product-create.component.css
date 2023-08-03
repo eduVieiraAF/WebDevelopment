@@ -1,5 +1,5 @@
 .title {
-    color: crimson;
+    color: white;
     text-align: center;
     background-color: black;
     border-radius: 7px;
@@ -8,7 +8,8 @@
 
 .card {
     padding: 7px;
-    background-color: white;
+    background-color: rgb(184, 181, 181);
+    border-radius: 12px;
 }
 
 form {
@@ -28,5 +29,9 @@ div {
 }
 
 button {
-    margin: 7px;
+    margin-right: 7px;
+}
+
+input {
+    border-radius: 12px;
 }
