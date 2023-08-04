@@ -3,7 +3,12 @@
     width: 150px;
 }
 
-.sidenav a {
+.sidenav a i {
+    color: white;
+}
+
+.sidenav a i span {
+    
     color: white;
 }
 
