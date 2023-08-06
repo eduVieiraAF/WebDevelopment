@@ -1,29 +1,9 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Ball-point pen type#1",
-      "price": "0.98"
-    },
-    {
-      "id": 2,
-      "name": "Asus Rogue",
-      "price": 2781
-    },
-    {
-      "id": 3,
-      "name": "iPhone11",
-      "price": "1754.99"
-    },
-    {
-      "name": "pencil #2",
-      "price": "0.47",
-      "id": 4
-    },
-    {
-      "name": "water bottle",
-      "price": "0.45",
-      "id": 5
+      "name": "EDUARDO V A FONSECA",
+      "price": "12000000",
+      "id": 1
     }
   ]
 }
