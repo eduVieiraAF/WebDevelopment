@@ -19,16 +19,6 @@
       "name": "pencil",
       "price": "0.5",
       "id": 4
-    },
-    {
-      "name": "teste",
-      "price": "0,5",
-      "id": 5
-    },
-    {
-      "name": "78p",
-      "price": "78.5",
-      "id": 6
     }
   ]
 }
