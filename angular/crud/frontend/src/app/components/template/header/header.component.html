@@ -1,13 +1,13 @@
 <mat-toolbar class="header mat-elevation-z3">
-    <a>
+    <a routerLink="/">
         <img src="assets/img/logo.png" alt="logo" class="logo">
     </a>
     <span class="title-group">
-        <a>
+        <a routerLink="{{ routeURL }}">
             <i class="material-icons">
-                beenhere
+                {{ icon }}
             </i>
-            Aplicação CRUD
+            {{ title }}
         </a>
     </span>
 </mat-toolbar>

@@ -2,8 +2,13 @@
   "products": [
     {
       "name": "EDUARDO V A FONSECA",
-      "price": "12000000",
+      "price": "12600055",
       "id": 1
+    },
+    {
+      "name": "eduardo vieira alves da fonseca",
+      "price": "4578124",
+      "id": 2
     }
   ]
 }
