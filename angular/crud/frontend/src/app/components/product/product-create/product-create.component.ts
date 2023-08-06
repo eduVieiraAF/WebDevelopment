@@ -11,7 +11,7 @@ import { Product } from '../product.model';
 export class ProductCreateComponent implements OnInit {
   product: Product = {
     name: "",
-    price: 0.00
+    price: ""
   }
 
   constructor(private productService: ProductService, private router: Router) { }
@@ -20,13 +20,17 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado com sucesso')
-      this.router.navigate(['/products'])  
-    })
+    if (this.product.name == '' || this.product.price === "0" || this.product.price === '') 
+      this.productService.showMessage('Não pode haver campos vazios')
+    else {
+      this.productService.create(this.product).subscribe(() => {
+        this.productService.showMessage('Produto criado com sucesso')
+        this.router.navigate(['/products'])
+      })
+    }
   }
 
-  cancel() { 
+  cancel() {
     this.router.navigate(['/products'])
   }
 }

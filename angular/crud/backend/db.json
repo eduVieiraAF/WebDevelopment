@@ -16,14 +16,9 @@
       "price": 2000
     },
     {
-      "name": "#2 pencil",
-      "price": "0.15",
+      "name": "pencil",
+      "price": "0.5",
       "id": 4
-    },
-    {
-      "name": "EDUARDO V A FONSECA",
-      "price": "20000000",
-      "id": 5
     }
   ]
 }
