@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEditComponent } from 'src/app/views/add-edit/add-edit.component';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  constructor(private _dialog: MatDialog) {
+  }
 
+  openEditAddForm() {
+    this._dialog.open(AddEditComponent)
+  }
 }

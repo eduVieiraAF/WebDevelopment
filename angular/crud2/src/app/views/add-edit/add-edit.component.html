@@ -1,0 +1,56 @@
+<div mat-dialog-title class="title">ENTRY FORM</div>
+<!-- <mat-divider></mat-divider> -->
+<div mat-dialog-content class="content">
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" />
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+      <mat-hint>John</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Doe" />
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+      <mat-hint>Smith</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" />
+      <mat-hint>example@example.com</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="datepicker">
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="row radio">
+    <mat-radio-group aria-label="Select an option">
+      <mat-label><strong>GENDER:</strong></mat-label>
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="others">Other</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="row"></div>
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-raised-button color="primary">
+    Save
+    <mat-icon class="v-middle">save</mat-icon>
+  </button>
+  <button mat-raised-button>
+    Cancel
+    <mat-icon>cancel</mat-icon>
+  </button>
+</div>

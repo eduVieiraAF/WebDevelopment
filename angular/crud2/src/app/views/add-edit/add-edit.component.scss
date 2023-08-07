@@ -1,0 +1,42 @@
+.content {
+  padding-top: 12px;
+}
+
+.title {
+  margin-bottom: 7px;
+  padding-top: 12px;
+  background-color: midnightblue;
+  color: white;
+  // border-bottom-left-radius: 7px;
+  // border-bottom-right-radius: 7px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  // width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.action {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 12px;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+}
+
