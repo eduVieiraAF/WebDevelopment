@@ -8,7 +8,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
@@ -18,6 +20,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
 import { AddEditComponent } from './views/add-edit/add-edit.component';
+
+import { NgFor } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { AddEditComponent } from './views/add-edit/add-edit.component';
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    FormsModule,
+    NgFor,
+    MatSelectModule,
+    ReactiveFormsModule
 
   ],
   providers: [
