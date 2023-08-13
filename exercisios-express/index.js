@@ -1,7 +1,15 @@
 const express = require('express')
 const app = express()
+const greet = require('./greetMiddleware')
 
-app.use('', (req, res) => {
+app.use(greet("Edu"))
+
+app.use('/hello', (req, res, next) => {
+    console.log("On-call")
+    next()
+})
+
+app.get('/hello', (req, res) => {
     // res.send("<h1>Up and running</h1>")
     // res.json({
     //     name: 'Ford Explorer',
