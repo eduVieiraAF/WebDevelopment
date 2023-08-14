@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 const greet = require('./greetMiddleware')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.text())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(greet("Edu"))
 
@@ -19,15 +24,19 @@ app.get('/clients/:id', (req, res) => {
 })
 
 app.post('/body', (req, res) => {
-    let body = ""
-    req.on('data', function(part) {
-        body += part
-    })
+    // let body = ""
+    // req.on('data', function(part) {
+    //     body += part
+    // })
 
-    req.on('end', function() {
-        res.send(body)
-        // res.json(JSON.parse(body))
-    })
+    // req.on('end', function() {
+    //     res.send(body)
+    //     res.json(JSON.parse(body))
+    // })
+
+    //* as I'm using body-parser
+    res.send(req.body)
+    // res.send(JSON.stringify(req.body))
 })
 
 app.get('/hello', (req, res) => {
