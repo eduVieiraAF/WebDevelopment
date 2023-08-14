@@ -9,6 +9,27 @@ app.use('/hello', (req, res, next) => {
     next()
 })
 
+app.get('/client/report', (req, res) => {
+    res.send(`Report: Full ${req.query.full} year ${req.query.year}`)
+    // http://localhost:3000/client/report?full=true&year=2021
+})
+
+app.get('/clients/:id', (req, res) => {
+    res.send(`client ${req.params.id} selected`)
+})
+
+app.post('/body', (req, res) => {
+    let body = ""
+    req.on('data', function(part) {
+        body += part
+    })
+
+    req.on('end', function() {
+        res.send(body)
+        // res.json(JSON.parse(body))
+    })
+})
+
 app.get('/hello', (req, res) => {
     // res.send("<h1>Up and running</h1>")
     // res.json({
