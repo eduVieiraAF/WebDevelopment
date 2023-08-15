@@ -22,6 +22,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { AddEditComponent } from './views/add-edit/add-edit.component';
 
 import { NgFor } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NgFor } from '@angular/common';
     FormsModule,
     NgFor,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [
