@@ -3,6 +3,7 @@ const app = express()
 const greet = require('./greetMiddleware')
 const bodyParser = require('body-parser')
 const userAPI = require('./API/user')
+require('./API/product')(app, 'with params')
 
 app.post('/user', userAPI.save)
 app.get('/user', userAPI.obtain)
