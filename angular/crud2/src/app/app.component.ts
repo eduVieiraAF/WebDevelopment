@@ -8,24 +8,9 @@ import { AddEditComponent } from './views/add-edit/add-edit.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'CRUD Application';
 
-  constructor(private _dialog: MatDialog, private _userService: UsersService) { }
 
-  openAddEditUseForm() {
-    this._dialog.open(AddEditComponent)
-  }
-
-  getUsers() {
-    this._userService.fetchUser().subscribe({
-      next: (res) => console.log(res),
-      error: console.error
-    });
-  }
-
-  ngOnInit(): void {
-    this.getUsers()
-  }
 }
 

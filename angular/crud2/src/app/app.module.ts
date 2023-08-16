@@ -25,12 +25,15 @@ import { AddEditComponent } from './views/add-edit/add-edit.component';
 
 import { NgFor } from '@angular/common';
 import {  HttpClientModule } from '@angular/common/http';
+import { ListingComponent } from './views/listing/listing.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddEditComponent
+    AddEditComponent,
+    ListingComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ import {  HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatPaginatorModule,
     MatTableModule,
-
+    MatSortModule
 
   ],
   providers: [

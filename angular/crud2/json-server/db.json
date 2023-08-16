@@ -26,6 +26,16 @@
       "education": "PhD",
       "company": "Apex",
       "id": 1
+    },
+    {
+      "firstName": "edu2",
+      "lastName": "vieira",
+      "email": "edu2@email.net",
+      "dob": "1982-02-20T03:00:00.000Z",
+      "gender": "male",
+      "education": "Master's degree",
+      "company": "Apping",
+      "id": 2
     }
   ]
 }
