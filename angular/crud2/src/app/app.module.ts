@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { NgModule, AfterViewInit, ViewChild } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,7 +24,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { AddEditComponent } from './views/add-edit/add-edit.component';
 
 import { NgFor } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NgFor,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule,
+    MatTableModule,
+
 
   ],
   providers: [
