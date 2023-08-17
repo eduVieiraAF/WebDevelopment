@@ -1,3 +1,4 @@
+import { DataSource } from '@angular/cdk/collections';
 // import { Component } from '@angular/core';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -5,7 +6,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { UserData } from '../userInterface';
+
 import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from 'src/app/services/users.service';
 import { AddEditComponent } from '../add-edit/add-edit.component';
@@ -16,27 +17,8 @@ import { AddEditComponent } from '../add-edit/add-edit.component';
   styleUrls: ['./listing.component.scss']
 })
 export class ListingComponent implements OnInit, AfterViewInit {
-
-  openAddEditUseForm() {
-    this._dialog.open(AddEditComponent)
-  }
-
-  getUsers() {
-    this._userService.fetchUser().subscribe({
-      next: (res) => console.log(res),
-      error: console.error
-    });
-  }
-
-  ngOnInit(): void {
-    this.getUsers()
-  }
-
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'education', 'dob', 'company'];
-  dataSource: MatTableDataSource<UserData>;
-
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+  dataSource: MatTableDataSource<any>;
 
   constructor(private _dialog: MatDialog, private _userService: UsersService) {
     // Create 100 users
@@ -46,10 +28,6 @@ export class ListingComponent implements OnInit, AfterViewInit {
     this.dataSource = new MatTableDataSource(users);
   }
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -58,12 +36,37 @@ export class ListingComponent implements OnInit, AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+
+  }
+
+  getUsers() {
+    this._userService.fetchUser().subscribe({
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res)
+        this.dataSource.sort = this.sort
+        this.dataSource.paginator = this.paginator
+      },
+      error: console.error
+    });
+  }
+
+  ngOnInit(): void {
+    this.getUsers()
+  }
+
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 }
 
-/** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-   return {
+function createNewUser(id: number): any {
+  return {
     id,
     firstName: "",
     lastName: "",

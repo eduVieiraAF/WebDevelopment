@@ -43,6 +43,8 @@ export class AddEditComponent {
         alert("user added successfully")
         this._dialogRef.close()
         console.log(this.userForm.value)
+
+        location.reload()
       },
 
       error: (err) => {
