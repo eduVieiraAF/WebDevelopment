@@ -2,6 +2,7 @@ import { DialogRef } from '@angular/cdk/dialog';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AddEditComponent {
     "PhD"
   ]
 
-  constructor(private _formBuilder: FormBuilder, private _userService: UsersService, private _dialogRef: DialogRef<AddEditComponent>) {
+  constructor(private _formBuilder: FormBuilder, private _userService: UsersService, private _dialogRef: DialogRef<AddEditComponent>, private _snackbar: MatSnackBar) {
     this.userForm = this._formBuilder.group(
       {
         firstName: '',
@@ -37,14 +38,29 @@ export class AddEditComponent {
   onFormSubmit() {
     if (this.userForm.valid) this._userService.addUser(this.userForm.value).subscribe({
       next: (val: any) => {
-        alert("user added successfully")
+        // alert("user added successfully")
         this._dialogRef.close()
-        console.log(this.userForm.value)
+        this._snackbar.open('User has been added', 'x', {
+          duration: 2500
+        })
 
-        location.reload()
+        // console.log(this.userForm.value)
+        setTimeout(() => {
+          location.reload()
+        }, 2500)
       },
 
-      error: console.error
+      error: (err) => {
+        console.error(err)
+        this._dialogRef.close()
+        this._snackbar.open('An error has occurred', 'x', {
+          duration: 2500
+        })
+
+        setTimeout(() => {
+          location.reload()
+        }, 2500)
+      }
     })
   }
 }

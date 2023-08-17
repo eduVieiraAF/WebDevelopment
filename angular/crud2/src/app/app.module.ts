@@ -1,3 +1,4 @@
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule, AfterViewInit, ViewChild } from '@angular/core';
@@ -57,7 +58,8 @@ import { MatSortModule } from '@angular/material/sort';
     HttpClientModule,
     MatPaginatorModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatSnackBarModule
 
   ],
   providers: [
