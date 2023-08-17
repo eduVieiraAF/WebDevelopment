@@ -26,16 +26,6 @@
       "education": "PhD",
       "company": "Apex",
       "id": 1
-    },
-    {
-      "firstName": "keller",
-      "lastName": "yacker",
-      "email": "kl@email.net",
-      "dob": "1758-01-08T03:06:28.000Z",
-      "gender": "other",
-      "education": "Higher Degree",
-      "company": "appogy ",
-      "id": 2
     }
   ]
 }
