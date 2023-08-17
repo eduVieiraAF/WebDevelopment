@@ -19,9 +19,6 @@ export class AddEditComponent {
     "PhD"
   ]
 
-
-
-
   constructor(private _formBuilder: FormBuilder, private _userService: UsersService, private _dialogRef: DialogRef<AddEditComponent>) {
     this.userForm = this._formBuilder.group(
       {
@@ -47,9 +44,7 @@ export class AddEditComponent {
         location.reload()
       },
 
-      error: (err) => {
-        console.error(err)
-      }
+      error: console.error
     })
   }
 }

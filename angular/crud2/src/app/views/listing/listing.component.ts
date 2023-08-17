@@ -28,6 +28,17 @@ export class ListingComponent implements OnInit, AfterViewInit {
     this.dataSource = new MatTableDataSource(users);
   }
 
+  getUsers() {
+    this._userService.fetchUser().subscribe({
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res)
+        this.dataSource.sort = this.sort
+        this.dataSource.paginator = this.paginator
+      },
+
+      error: console.error
+    });
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -36,19 +47,8 @@ export class ListingComponent implements OnInit, AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-
   }
 
-  getUsers() {
-    this._userService.fetchUser().subscribe({
-      next: (res) => {
-        this.dataSource = new MatTableDataSource(res)
-        this.dataSource.sort = this.sort
-        this.dataSource.paginator = this.paginator
-      },
-      error: console.error
-    });
-  }
 
   ngOnInit(): void {
     this.getUsers()
@@ -77,5 +77,3 @@ function createNewUser(id: number): any {
     education: ""
   };
 }
-
-
