@@ -59,7 +59,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule
 
   ],
   providers: [

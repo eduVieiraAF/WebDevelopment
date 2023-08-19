@@ -13,7 +13,7 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./listing.component.scss']
 })
 export class ListingComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'education', 'dob', 'company'];
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'education', 'dob', 'company', 'actions'];
   dataSource: MatTableDataSource<any>;
 
   constructor(private _dialog: MatDialog, private _userService: UsersService) {
@@ -34,6 +34,16 @@ export class ListingComponent implements OnInit, AfterViewInit {
 
       error: console.error
     });
+  }
+
+  deleteUser(id: number) {
+    this._userService.deleteUser(id).subscribe({
+      next: (res) => {
+        location.reload()
+        alert('OK')
+      },
+      error: console.error
+    })
   }
 
   applyFilter(event: Event) {

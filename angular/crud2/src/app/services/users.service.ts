@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class UsersService {
   baseURL = 'http://localhost:3000/users'
 
+
   constructor(private _httpClient: HttpClient) { }
 
   addUser(data: any): Observable<any> {
@@ -16,5 +17,9 @@ export class UsersService {
 
   fetchUser(): Observable<any> {
     return this._httpClient.get(this.baseURL)
+  }
+
+  deleteUser(id: number): Observable<any> {
+return this._httpClient.delete(`http://localhost:3000/users/${id}`)
   }
 }
