@@ -11,7 +11,7 @@ export class HeaderComponent {
   constructor(private _dialog: MatDialog) {
   }
 
-  openEditAddForm() {
+  openAddForm() {
     this._dialog.open(AddEditComponent)
   }
 }

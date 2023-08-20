@@ -18,13 +18,13 @@
   },
   "users": [
     {
-      "firstName": "edu",
-      "lastName": "vieira",
-      "email": "edu@internet.net",
+      "firstName": "Eduardo",
+      "lastName": "VieriA",
+      "email": "edu@vieira.com",
       "dob": "1982-02-20T03:00:00.000Z",
       "gender": "male",
-      "education": "PhD",
-      "company": "Apex",
+      "education": "Master's degree",
+      "company": "Appogie",
       "id": 1
     }
   ]

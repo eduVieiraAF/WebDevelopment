@@ -5,6 +5,8 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from 'src/app/services/users.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AddEditComponent } from '../add-edit/add-edit.component';
 
 
 @Component({
@@ -16,7 +18,7 @@ export class ListingComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'gender', 'education', 'dob', 'company', 'actions'];
   dataSource: MatTableDataSource<any>;
 
-  constructor(private _dialog: MatDialog, private _userService: UsersService) {
+  constructor(private _dialog: MatDialog, private _userService: UsersService, private _snackbar: MatSnackBar) {
     // Create 100 users
     const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
@@ -39,10 +41,21 @@ export class ListingComponent implements OnInit, AfterViewInit {
   deleteUser(id: number) {
     this._userService.deleteUser(id).subscribe({
       next: (res) => {
-        location.reload()
-        alert('OK')
+        // alert('OK')
+        this._snackbar.open('User has been removed.', 'x', {
+          duration: 1500,
+          verticalPosition: 'top',
+        })
+
+        this.getUsers()
       },
       error: console.error
+    })
+  }
+
+  openEditForm(data: any) {
+    this._dialog.open(AddEditComponent,  {
+      data
     })
   }
 

@@ -65,7 +65,7 @@
 </div>
 <div mat-dialog-actions class="action">
   <button mat-raised-button color="primary" type="submit">
-    Save
+    {{data? 'Update': 'Save'}}
     <mat-icon class="v-middle">save</mat-icon>
   </button>
   <button mat-raised-button mat-dialog-close="">
