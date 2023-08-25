@@ -1,0 +1,13 @@
+.layout {
+    margin: 7px;
+    color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+}

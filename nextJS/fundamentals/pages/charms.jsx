@@ -1,12 +1,15 @@
+import Layout from '@/components/Layout'
 import styles from './charms..module.css'
 import Link from 'next/link'
 
 export default function Charms() {
     return (
         <div>
-            <Link href="/"><h3>← home</h3></Link>
+            <Layout> 
             <br />
-            <h1 className= {styles.cherry}>individual charm</h1>
+            <h1>individual charm</h1>
+            </Layout>
+            <button>yo</button>
         </div>
     )
 }
