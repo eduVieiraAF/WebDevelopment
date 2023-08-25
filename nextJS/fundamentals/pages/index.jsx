@@ -1,10 +1,19 @@
-import Link from "next/link"
+import Navigator from "@/components/Navigator"
 
 export default function Home() {
   return (
-    <div>
-      <Link href="/charms"><h1>Charming</h1></Link>
-      <Link href="/sample"><h1>Sample</h1></Link>
-    </div>
+    <div style={{
+      display: 'flex',
+      // flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      height: '100vh',
+      fontFamily: 'cursive',
+    }}>
+      <Navigator dest="/sample" text="sample"></Navigator>
+      <Navigator dest="/charms" text="charms"></Navigator>
+      <Navigator dest="/jsx" text="jsx" color="crimson"></Navigator>
+      </div>
   )
 }
