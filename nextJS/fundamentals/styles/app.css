@@ -1,0 +1,8 @@
+html,
+body {
+    padding: 7px;
+    margin: 0;
+    background-color: #222;
+    color: rgb(120, 211, 202);
+    font-family: Segoe UI, Roboto, Oxygen,
+}
