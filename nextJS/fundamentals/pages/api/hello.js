@@ -2,7 +2,10 @@
 
 export default function handler(req, res) {
   res.status(200).json({ 
-    name: 'Test API' ,
-    method: req.method
+    title: 'Test API' ,
+    method: req.method,
+    params: JSON.stringify(req.query),
+    name: req.query.name,
+    lang: req.query.lang
   })
 }
