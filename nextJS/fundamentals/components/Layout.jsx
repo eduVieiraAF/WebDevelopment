@@ -6,7 +6,7 @@ export default function Layout(props) {
 
     return (
         <div className={styles.layout}>
-            <Link href='/'>home</Link>
+            <Link href="/">home</Link>
             {props.children}
         </div>
     )

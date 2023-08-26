@@ -14,6 +14,8 @@ export default function Home() {
       <Navigator dest="/sample" text="sample"></Navigator>
       <Navigator dest="/charms" text="charms"></Navigator>
       <Navigator dest="/jsx" text="jsx" color="crimson"></Navigator>
+      <Navigator dest="/navigation" text="nav 01" color="crimson"></Navigator>
+      <Navigator dest="/client/br-2/123" text="nav 02" color="crimson"></Navigator>
     </div>
   )
 }
