@@ -4,9 +4,11 @@ import { useState } from "react";
 export default function State() {
     // let number = 3
 
-    const state = useState(0) 
-    let number = state[0]
-    let setNumber = state[1]
+    // const state = useState(0) 
+    // let number = state[0]
+    // let setNumber = state[1]
+
+    const [number, setNumber] = useState(0)
 
 
     function add() {
